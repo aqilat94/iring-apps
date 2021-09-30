@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
@@ -31,13 +33,35 @@ class Main extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            TextField(
-              decoration: InputDecoration(
-                prefixIcon: Icon(Icons.search, size: 18),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
+            Positioned(
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: Container(
+                margin: EdgeInsets.symmetric(horizontal: 5),
+                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                height: 54,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                          offset: Offset(0, 5),
+                          blurRadius: 10,
+                          color: Colors.black.withOpacity(0.20))
+                    ]),
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: "Search for hospitals & clinics",
+                    hintStyle: TextStyle(color: Colors.black26),
+                    enabledBorder: InputBorder.none,
+                    focusedBorder: InputBorder.none,
+                    icon: Icon(
+                      Icons.search,
+                      color: Colors.purple.shade600,
+                    ),
+                  ),
                 ),
-                hintText: 'Search',
               ),
             ),
             SizedBox(height: 20),
