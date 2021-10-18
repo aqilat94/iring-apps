@@ -52,7 +52,7 @@ class Main extends StatelessWidget {
                     ]),
                 child: TextField(
                   decoration: InputDecoration(
-                    hintText: "Search for hospitals & clinics",
+                    hintText: "Search for hospitals & clinics test",
                     hintStyle: TextStyle(color: Colors.black26),
                     enabledBorder: InputBorder.none,
                     focusedBorder: InputBorder.none,
