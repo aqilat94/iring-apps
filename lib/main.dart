@@ -7,6 +7,8 @@ import 'dart:math';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:iring/components/body_landing.dart';
+import 'package:iring/components/bottom_bar.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 void main() => runApp(
       MaterialApp(
@@ -19,6 +21,7 @@ class Main extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: BodyLanding(),
+      bottomNavigationBar: BottomBar(),
     );
   }
 }
